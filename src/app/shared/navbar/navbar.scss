@@ -91,6 +91,7 @@
     &:hover {
       transform: translateY(-2px);
       border-color: var(--primary);
+      color: var(--primary);
     }
   }
   
@@ -181,6 +182,12 @@
     gap: 10px;
     font-weight: 900;
     cursor: pointer;
+    transition: 0.25s ease;
+  
+    &:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
   }
   
   @media (max-width: 768px) {

@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import {
   BriefcaseBusiness,
@@ -68,12 +68,22 @@ export class Navbar {
     }
   }
 
+  @HostListener('window:keydown.escape')
+  onEscapePress(): void {
+    this.closeSidebar();
+  }
+
   toggleSidebar(): void {
-    this.isSidebarOpen.update((value) => !value);
+    this.isSidebarOpen.update((value) => {
+      const nextValue = !value;
+      this.updateBodyScroll(nextValue);
+      return nextValue;
+    });
   }
 
   closeSidebar(): void {
     this.isSidebarOpen.set(false);
+    this.updateBodyScroll(false);
   }
 
   toggleTheme(): void {
@@ -87,5 +97,9 @@ export class Navbar {
 
     document.body.classList.remove('dark-mode');
     localStorage.setItem('portfolio-theme', 'light');
+  }
+
+  private updateBodyScroll(isLocked: boolean): void {
+    document.body.classList.toggle('sidebar-open', isLocked);
   }
 }

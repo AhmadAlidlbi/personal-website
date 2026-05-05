@@ -36,6 +36,7 @@
         type="button"
         class="mobile-menu-btn"
         (click)="toggleSidebar()"
+        [attr.aria-expanded]="isSidebarOpen()"
         aria-label="Open mobile menu"
       >
         <lucide-angular [img]="Menu" [size]="24"></lucide-angular>
@@ -46,7 +47,7 @@
 
 <div class="sidebar-backdrop" [class.show]="isSidebarOpen()" (click)="closeSidebar()"></div>
 
-<aside class="mobile-sidebar" [class.open]="isSidebarOpen()">
+<aside class="mobile-sidebar" [class.open]="isSidebarOpen()" aria-label="Mobile menu">
   <div class="mobile-sidebar__header">
     <a routerLink="/" class="navbar__brand" (click)="closeSidebar()">
       <span class="navbar__brand-mark">AA</span>
