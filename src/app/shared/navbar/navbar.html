@@ -1,0 +1,90 @@
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a routerLink="/" class="navbar__brand" (click)="closeSidebar()">
+      <span class="navbar__brand-mark">AA</span>
+      <span class="navbar__brand-name">Ahmad Alidlbi</span>
+    </a>
+
+    <nav class="navbar__links" aria-label="Main navigation">
+      @for (link of navLinks; track link.route) {
+      <a
+        [routerLink]="link.route"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: link.exact }"
+        class="navbar__link"
+      >
+        {{ link.label }}
+      </a>
+      }
+    </nav>
+
+    <div class="navbar__actions">
+      <button
+        type="button"
+        class="theme-toggle"
+        (click)="toggleTheme()"
+        [attr.aria-label]="isDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'"
+      >
+        @if (isDarkMode()) {
+        <lucide-angular [img]="Sun" [size]="18"></lucide-angular>
+        } @else {
+        <lucide-angular [img]="Moon" [size]="18"></lucide-angular>
+        }
+      </button>
+
+      <button
+        type="button"
+        class="mobile-menu-btn"
+        (click)="toggleSidebar()"
+        aria-label="Open mobile menu"
+      >
+        <lucide-angular [img]="Menu" [size]="24"></lucide-angular>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="sidebar-backdrop" [class.show]="isSidebarOpen()" (click)="closeSidebar()"></div>
+
+<aside class="mobile-sidebar" [class.open]="isSidebarOpen()">
+  <div class="mobile-sidebar__header">
+    <a routerLink="/" class="navbar__brand" (click)="closeSidebar()">
+      <span class="navbar__brand-mark">AA</span>
+      <span class="navbar__brand-name">Ahmad Alidlbi</span>
+    </a>
+
+    <button
+      type="button"
+      class="mobile-sidebar__close"
+      (click)="closeSidebar()"
+      aria-label="Close mobile menu"
+    >
+      <lucide-angular [img]="X" [size]="22"></lucide-angular>
+    </button>
+  </div>
+
+  <nav class="mobile-sidebar__links" aria-label="Mobile navigation">
+    @for (link of navLinks; track link.route) {
+    <a
+      [routerLink]="link.route"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: link.exact }"
+      class="mobile-sidebar__link"
+      (click)="closeSidebar()"
+    >
+      <lucide-angular [img]="link.icon" [size]="19"></lucide-angular>
+      <span>{{ link.label }}</span>
+    </a>
+    }
+  </nav>
+
+  <button type="button" class="mobile-sidebar__theme" (click)="toggleTheme()">
+    @if (isDarkMode()) {
+    <lucide-angular [img]="Sun" [size]="18"></lucide-angular>
+    <span>Light mode</span>
+    } @else {
+    <lucide-angular [img]="Moon" [size]="18"></lucide-angular>
+    <span>Dark mode</span>
+    }
+  </button>
+</aside>
