@@ -1,1 +1,108 @@
-<p>contact works!</p>
+<section class="contact-page section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Contact</p>
+      <h1>Let’s build something clean and scalable</h1>
+      <p>
+        Have a project, idea, or opportunity? Send me a message and I’ll get back to you as soon as
+        possible.
+      </p>
+    </div>
+
+    <div class="contact-page__grid">
+      <div class="contact-page__info">
+        <div class="contact-page__intro">
+          <h2>Get in touch</h2>
+          <p>
+            I’m available for web dashboards, mobile applications, API integrations, enterprise
+            portals, and software modernization projects.
+          </p>
+        </div>
+
+        <div class="contact-page__cards">
+          @for (item of contactInfo; track item.label) { @if (item.href) {
+          <a [href]="item.href" target="_blank" rel="noopener noreferrer" class="contact-info-card">
+            <span class="contact-info-card__icon">
+              <lucide-angular [img]="item.icon" [size]="20"></lucide-angular>
+            </span>
+
+            <span>
+              <small>{{ item.label }}</small>
+              <strong>{{ item.value }}</strong>
+            </span>
+          </a>
+          } @else {
+          <div class="contact-info-card">
+            <span class="contact-info-card__icon">
+              <lucide-angular [img]="item.icon" [size]="20"></lucide-angular>
+            </span>
+
+            <span>
+              <small>{{ item.label }}</small>
+              <strong>{{ item.value }}</strong>
+            </span>
+          </div>
+          } }
+        </div>
+      </div>
+
+      <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <div class="contact-form__row">
+          <label>
+            <span>Name</span>
+            <input
+              type="text"
+              name="name"
+              [(ngModel)]="formData.name"
+              placeholder="Your name"
+              required
+            />
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input
+              type="email"
+              name="email"
+              [(ngModel)]="formData.email"
+              placeholder="your@email.com"
+              required
+            />
+          </label>
+        </div>
+
+        <label>
+          <span>Subject</span>
+          <input
+            type="text"
+            name="subject"
+            [(ngModel)]="formData.subject"
+            placeholder="Project inquiry"
+            required
+          />
+        </label>
+
+        <label>
+          <span>Message</span>
+          <textarea
+            name="message"
+            [(ngModel)]="formData.message"
+            placeholder="Tell me about your project..."
+            rows="7"
+            required
+          ></textarea>
+        </label>
+
+        <button type="submit" class="contact-form__button" [disabled]="contactForm.invalid">
+          Send Message
+          <lucide-angular [img]="Send" [size]="18"></lucide-angular>
+        </button>
+
+        <p class="contact-form__note">
+          This form is currently frontend-only. Web3Forms integration will be added in the next
+          phase.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
