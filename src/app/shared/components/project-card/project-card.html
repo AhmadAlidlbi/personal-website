@@ -1,1 +1,22 @@
-<p>project-card works!</p>
+<article class="project-card">
+  <div class="project-card__body">
+    <p class="project-card__eyebrow">{{ eyebrow() }}</p>
+
+    <h3>{{ title() }}</h3>
+
+    <p class="project-card__description">
+      {{ description() }}
+    </p>
+
+    <div class="project-card__badges">
+      @for (technology of technologies(); track technology) {
+      <span class="badge">{{ technology }}</span>
+      }
+    </div>
+  </div>
+
+  <a [href]="projectUrl()" target="_blank" rel="noopener noreferrer" class="project-card__button">
+    View Project
+    <lucide-angular [img]="ExternalLink" [size]="18"></lucide-angular>
+  </a>
+</article>

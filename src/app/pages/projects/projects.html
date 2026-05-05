@@ -1,1 +1,24 @@
-<p>projects works!</p>
+<section class="projects-page section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Projects</p>
+      <h1>Selected software projects and systems</h1>
+      <p>
+        A collection of web, mobile, and enterprise solutions focused on clean architecture,
+        maintainability, responsive interfaces, and practical business value.
+      </p>
+    </div>
+
+    <div class="projects-page__grid">
+      @for (project of projects; track project.title) {
+      <app-project-card
+        [eyebrow]="project.eyebrow"
+        [title]="project.title"
+        [description]="project.description"
+        [technologies]="project.technologies"
+        [projectUrl]="project.projectUrl"
+      ></app-project-card>
+      }
+    </div>
+  </div>
+</section>

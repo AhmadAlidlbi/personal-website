@@ -1,1 +1,11 @@
-<p>experience-card works!</p>
+<article class="experience-card">
+  <div class="experience-card__content">
+    <h3>{{ role() }}</h3>
+    <p class="experience-card__company">{{ company() }}</p>
+    <p class="experience-card__details">{{ details() }}</p>
+  </div>
+
+  <div class="experience-card__period">
+    {{ period() }}
+  </div>
+</article>

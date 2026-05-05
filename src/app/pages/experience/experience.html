@@ -1,1 +1,23 @@
-<p>experience works!</p>
+<section class="experience-page section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Experience</p>
+      <h1>Focused on reliable systems and clean delivery</h1>
+      <p>
+        My work combines practical business logic, stable architecture, responsive interfaces, and
+        professional implementation across Angular, Flutter, and .NET-based systems.
+      </p>
+    </div>
+
+    <div class="experience-page__list">
+      @for (experience of experiences; track experience.role) {
+      <app-experience-card
+        [role]="experience.role"
+        [company]="experience.company"
+        [period]="experience.period"
+        [details]="experience.details"
+      ></app-experience-card>
+      }
+    </div>
+  </div>
+</section>

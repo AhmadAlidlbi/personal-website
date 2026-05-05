@@ -1,1 +1,106 @@
-<p>home works!</p>
+<section class="hero section">
+  <div class="hero__glow hero__glow--one"></div>
+  <div class="hero__glow hero__glow--two"></div>
+
+  <div class="container hero__grid">
+    <div class="hero__content">
+      <div class="hero__status">
+        <span></span>
+        Available for software development projects
+      </div>
+
+      <p class="hero__eyebrow">Software Developer</p>
+
+      <h1>Hi, I’m Ahmad Alidlbi. I build clean web and mobile applications.</h1>
+
+      <h2>Angular, Flutter, and .NET developer focused on scalable, maintainable systems.</h2>
+
+      <p class="hero__summary">
+        I create professional dashboards, enterprise portals, mobile apps, and API-driven systems
+        with strong attention to clean architecture, user experience, performance, and long-term
+        maintainability.
+      </p>
+
+      <div class="hero__actions">
+        <a href="assets/files/Ahmad-Alidlbi-Resume.pdf" download class="btn btn-primary">
+          <lucide-angular [img]="Download" [size]="18"></lucide-angular>
+          Download Resume
+        </a>
+
+        <a routerLink="/projects" class="btn btn-outline">
+          View Projects
+          <lucide-angular [img]="ArrowRight" [size]="18"></lucide-angular>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__image-wrap">
+      <div class="hero__image-card">
+        <img src="assets/images/profile.jpg" alt="Ahmad Alidlbi profile photo" />
+
+        <div class="hero__image-badge hero__image-badge--top">Angular / Flutter / .NET</div>
+
+        <div class="hero__image-badge hero__image-badge--bottom">Based in Kuwait</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tech-stack">
+  <div class="container">
+    <p class="tech-stack__title">Technologies I work with</p>
+
+    <div class="tech-stack__badges">
+      @for (technology of technologies; track technology) {
+      <span class="badge">{{ technology }}</span>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="about section">
+  <div class="container about__grid">
+    <div>
+      <p class="about__eyebrow">About Me</p>
+      <h2>Software developer with a practical, business-focused approach.</h2>
+    </div>
+
+    <div class="about__content">
+      <p>
+        I specialize in building reliable software solutions for real business needs. My work
+        combines frontend development, mobile application development, API integration, and
+        enterprise workflow implementation.
+      </p>
+
+      <p>
+        I care about writing clean, maintainable code and creating user interfaces that are easy to
+        use, responsive, and ready for future expansion. Whether the project is an Angular
+        dashboard, a Flutter mobile app, or a .NET API integration, I focus on building systems that
+        are stable, scalable, and easy to maintain.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="capabilities section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Capabilities</p>
+      <h2>A full-stack skill set for production-ready delivery</h2>
+      <p>
+        From UI implementation to backend integration, I focus on clean code, reusable structures,
+        secure flows, and smooth user journeys.
+      </p>
+    </div>
+
+    <div class="capabilities__grid">
+      @for (capability of capabilities; track capability.title) {
+      <app-capability-card
+        [icon]="capability.icon"
+        [title]="capability.title"
+        [items]="capability.items"
+      ></app-capability-card>
+      }
+    </div>
+  </div>
+</section>
