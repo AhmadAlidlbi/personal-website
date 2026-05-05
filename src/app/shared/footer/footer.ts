@@ -19,22 +19,22 @@ export class Footer {
   socialLinks = [
     {
       label: 'GitHub',
-      url: 'https://github.com/your-github',
+      url: 'https://github.com/AhmadAlidlbi',
       icon: Github,
     },
     {
       label: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/your-linkedin',
+      url: 'https://www.linkedin.com/in/ahmadalidlbi',
       icon: Linkedin,
     },
     {
       label: 'Instagram',
-      url: 'https://www.instagram.com/your-instagram',
+      url: 'https://www.instagram.com/dev0ex',
       icon: Instagram,
     },
     {
       label: 'Email',
-      url: 'mailto:your-email@example.com',
+      url: 'mailto:ahmedidlbi@hotmail.com',
       icon: Mail,
     },
   ];

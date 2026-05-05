@@ -12,6 +12,22 @@ import { ProjectCard } from '../../shared/components/project-card/project-card';
 export class Projects {
   projects = [
     {
+      eyebrow: 'Angular / Website',
+      title: 'Into Art Kuwait Website',
+      description:
+        'A modern company website for Into Art Kuwait with a clean visual structure, responsive layout, and professional brand-focused presentation.',
+      technologies: ['Angular', 'SCSS', 'Responsive Design', 'UI/UX', 'Website'],
+      projectUrl: 'https://www.intoartkw.com/',
+    },
+    {
+      eyebrow: 'Angular / Website',
+      title: 'Redesign Kuwait Website',
+      description:
+        'A professional website for Redesign Kuwait focused on modern layout, smooth user experience, responsive sections, and clean visual identity.',
+      technologies: ['Angular', 'SCSS', 'Responsive Design', 'UI Design', 'Deployment'],
+      projectUrl: 'https://www.redesignkw.com/',
+    },
+    {
       eyebrow: 'Angular + .NET Core',
       title: 'Enterprise Archive System',
       description:
@@ -36,27 +52,11 @@ export class Projects {
       projectUrl: '#',
     },
     {
-      eyebrow: 'Angular + API Integration',
-      title: 'Gas Maintenance Orders System',
-      description:
-        'A responsive admin system for managing service orders, filtering by market and area, tracking order status, and supporting role-based actions.',
-      technologies: ['Angular', 'Material Table', 'REST API', 'Status Workflow', 'Responsive UI'],
-      projectUrl: '#',
-    },
-    {
       eyebrow: 'Flutter + MVVM',
       title: 'Purchase Analytics Feature',
       description:
         'A mobile analytics feature that visualizes purchases by date, branch, and category using API data, filters, and clean Provider-based state management.',
       technologies: ['Flutter', 'Provider', 'Charts', 'MVVM', 'REST API'],
-      projectUrl: '#',
-    },
-    {
-      eyebrow: 'Angular Reusable Components',
-      title: 'Dynamic Lookup Management',
-      description:
-        'A reusable lookup management module for handling multiple categories with consistent CRUD flows, tables, dialogs, filtering, and permissions.',
-      technologies: ['Angular', 'Reusable Components', 'CRUD', 'SCSS', 'Permissions'],
       projectUrl: '#',
     },
   ];

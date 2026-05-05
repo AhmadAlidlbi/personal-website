@@ -46,7 +46,7 @@
         </div>
       </div>
 
-      <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+      <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div class="contact-form__row">
           <label>
             <span>Name</span>
@@ -93,15 +93,27 @@
           ></textarea>
         </label>
 
-        <button type="submit" class="contact-form__button" [disabled]="contactForm.invalid">
-          Send Message
+        <button
+          type="submit"
+          class="contact-form__button"
+          [disabled]="contactForm.invalid || isSubmitting()"
+        >
+          @if (isSubmitting()) { Sending... } @else { Send Message
           <lucide-angular [img]="Send" [size]="18"></lucide-angular>
+          }
         </button>
 
-        <p class="contact-form__note">
-          This form is currently frontend-only. Web3Forms integration will be added in the next
-          phase.
+        @if (submitSuccess()) {
+        <p class="contact-form__message contact-form__message--success">
+          {{ submitSuccess() }}
         </p>
+        } @if (submitError()) {
+        <p class="contact-form__message contact-form__message--error">
+          {{ submitError() }}
+        </p>
+        }
+
+        <p class="contact-form__note">Your message will be sent securely through Web3Forms.</p>
       </form>
     </div>
   </div>

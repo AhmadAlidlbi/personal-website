@@ -169,13 +169,32 @@
     }
   }
   
+  .contact-form__message,
   .contact-form__note {
     margin: 0;
-    color: var(--text-muted);
     font-size: 0.85rem;
     line-height: 1.6;
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
+  }
+  
+  .contact-form__message {
+    padding: 12px 14px;
+    border-radius: 16px;
+  }
+  
+  .contact-form__message--success {
+    background: color-mix(in srgb, #22c55e 14%, transparent);
+    color: #16a34a;
+  }
+  
+  .contact-form__message--error {
+    background: color-mix(in srgb, #ef4444 14%, transparent);
+    color: #dc2626;
+  }
+  
+  .contact-form__note {
+    color: var(--text-muted);
   }
   
   @media (max-width: 900px) {

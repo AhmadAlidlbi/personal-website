@@ -15,8 +15,12 @@
     </div>
   </div>
 
+  @if (projectUrl() && projectUrl() !== '#') {
   <a [href]="projectUrl()" target="_blank" rel="noopener noreferrer" class="project-card__button">
     View Project
     <lucide-angular [img]="ExternalLink" [size]="18"></lucide-angular>
   </a>
+  } @else {
+  <div class="project-card__button project-card__button--disabled">Private Project</div>
+  }
 </article>

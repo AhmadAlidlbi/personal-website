@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, signal } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
 import { Github, Linkedin, Mail, MapPin, Send, LucideAngularModule } from 'lucide-angular';
 
 @Component({
@@ -16,11 +16,18 @@ export class Contact {
   readonly Linkedin = Linkedin;
   readonly Send = Send;
 
+  private readonly web3FormsAccessKey = '57ae02b3-d587-47da-b7ba-c857ccfcdff1';
+  private readonly web3FormsEndpoint = 'https://api.web3forms.com/submit';
+
+  isSubmitting = signal(false);
+  submitSuccess = signal('');
+  submitError = signal('');
+
   contactInfo = [
     {
       label: 'Email',
-      value: 'your-email@example.com',
-      href: 'mailto:your-email@example.com',
+      value: 'ahmedidlbi@hotmail.com',
+      href: 'mailto:ahmedidlbi@hotmail.com',
       icon: Mail,
     },
     {
@@ -31,14 +38,14 @@ export class Contact {
     },
     {
       label: 'GitHub',
-      value: 'github.com/your-github',
-      href: 'https://github.com/your-github',
+      value: 'github.com/AhmadAlidlbi',
+      href: 'https://github.com/AhmadAlidlbi',
       icon: Github,
     },
     {
       label: 'LinkedIn',
-      value: 'linkedin.com/in/your-linkedin',
-      href: 'https://www.linkedin.com/in/your-linkedin',
+      value: 'linkedin.com/in/ahmadalidlbi',
+      href: 'https://www.linkedin.com/in/ahmadalidlbi',
       icon: Linkedin,
     },
   ];
@@ -50,16 +57,54 @@ export class Contact {
     message: '',
   };
 
-  onSubmit(): void {
-    console.log('Contact form submitted:', this.formData);
+  async onSubmit(contactForm: NgForm): Promise<void> {
+    if (contactForm.invalid || this.isSubmitting()) {
+      return;
+    }
 
-    alert('Contact form UI is ready. Web3Forms integration will be added later.');
+    this.isSubmitting.set(true);
+    this.submitSuccess.set('');
+    this.submitError.set('');
 
-    this.formData = {
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
+    const payload = {
+      access_key: this.web3FormsAccessKey,
+      name: this.formData.name,
+      email: this.formData.email,
+      subject: this.formData.subject,
+      message: this.formData.message,
+      from_name: 'Ahmad Alidlbi Portfolio',
     };
+
+    try {
+      const response = await fetch(this.web3FormsEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'Message could not be sent.');
+      }
+
+      this.submitSuccess.set('Message sent successfully. Thank you for reaching out.');
+      contactForm.resetForm();
+
+      this.formData = {
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      };
+    } catch (error) {
+      console.error('Web3Forms submit error:', error);
+      this.submitError.set('Something went wrong. Please try again later.');
+    } finally {
+      this.isSubmitting.set(false);
+    }
   }
 }
