@@ -1,1 +1,26 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__top">
+      <p>Get connected with me on social networks!</p>
+
+      <div class="footer__socials" aria-label="Social links">
+        @for (social of socialLinks; track social.label) {
+        <a
+          [href]="social.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer__social-link"
+          [attr.aria-label]="social.label"
+        >
+          <lucide-angular [img]="social.icon" [size]="18"></lucide-angular>
+          <span>{{ social.label }}</span>
+        </a>
+        }
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© {{ currentYear }} Ahmad Alidlbi. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
