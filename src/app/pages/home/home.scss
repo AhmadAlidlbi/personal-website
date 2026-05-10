@@ -137,22 +137,21 @@
   
   .about__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 24px;
+    text-align: center;
   }
-  
-  .about h2 {
-    margin: 0;
-    color: var(--text-main);
-    font-size: clamp(1.8rem, 3.8vw, 3.3rem);
-    line-height: 0.98;
-    letter-spacing: 0.01em;
+
+  .about__intro {
+    width: 100%;
   }
   
   .about__content {
+    width: min(760px, 100%);
     display: grid;
     gap: 18px;
-  
+
     p {
       margin: 0;
       color: var(--text-muted);

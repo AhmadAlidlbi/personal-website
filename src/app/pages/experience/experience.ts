@@ -12,25 +12,25 @@ import { ExperienceCard } from '../../shared/components/experience-card/experien
 export class Experience {
   experiences = [
     {
-      role: 'Software Developer',
-      company: 'Enterprise & Government-Style Systems',
-      period: '2024 — Present',
+      role: 'Front-End Developer',
+      company: 'IBRGC',
+      period: 'July 2025 - Present',
       details:
-        'Building scalable Angular, Flutter, and .NET solutions with strong focus on maintainability, role permissions, reusable components, API integrations, and bilingual user experiences.',
+        'Developed responsive Angular 17+ applications with TypeScript and RxJS, reusable standalone components, lazy loading, Angular Router, reactive forms, REST API integration, services and signals, and bilingual Arabic/English RTL support with ngx-translate and Angular i18n.',
     },
     {
-      role: 'Mobile App Developer',
-      company: 'Kuwait Markets App',
-      period: '2025 — Present',
+      role: 'Mobile App Developer Intern',
+      company: 'DVCOM',
+      period: 'January 2025 - March 2025',
       details:
-        'Delivered and enhanced a production Flutter application with marketplace features, cached market selection, API-driven content, push notification flows, responsive UI, and store deployment readiness.',
+        'Redesigned the Xcally app UI in Figma and implemented responsive React Native Expo screens for iOS and Android in collaboration with the development team.',
     },
     {
-      role: 'Frontend Developer',
-      company: 'Angular Enterprise Dashboards',
-      period: '2024 — Present',
+      role: 'Web Developer Intern',
+      company: 'Workiom',
+      period: 'July 2023 - September 2023',
       details:
-        'Developing reusable Angular components, dynamic tables, role-based page visibility, Excel exports, responsive layouts, status workflows, and clean SCSS-based user interfaces.',
+        'Managed and optimized the company website and multilingual knowledge base in English, Turkish, and Arabic, maintained the CMS, and collaborated with the development team on delivery.',
     },
   ];
 }
