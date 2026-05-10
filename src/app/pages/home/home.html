@@ -4,16 +4,9 @@
 
   <div class="container hero__grid">
     <div class="hero__content">
-      <div class="hero__status">
-        <span></span>
-        Available for software development projects
-      </div>
-
       <p class="hero__eyebrow">Software Developer</p>
 
       <h1>Hi, I’m Ahmad Alidlbi. I build clean web and mobile applications.</h1>
-
-      <h2>Angular, Flutter, and .NET developer focused on scalable, maintainable systems.</h2>
 
       <p class="hero__summary">
         I create professional dashboards, enterprise portals, mobile apps, and API-driven systems
@@ -37,10 +30,6 @@
     <div class="hero__image-wrap">
       <div class="hero__image-card">
         <img src="assets/images/profile.jpg" alt="Ahmad Alidlbi profile photo" />
-
-        <div class="hero__image-badge hero__image-badge--top">Angular / Flutter / .NET</div>
-
-        <div class="hero__image-badge hero__image-badge--bottom">Based in Kuwait</div>
       </div>
     </div>
   </div>
@@ -51,8 +40,13 @@
     <p class="tech-stack__title">Technologies I work with</p>
 
     <div class="tech-stack__badges">
-      @for (technology of technologies; track technology) {
-      <span class="badge">{{ technology }}</span>
+      @for (technology of technologies; track technology.label) {
+      <span class="badge tech-stack__badge">
+        <svg class="tech-stack__icon" viewBox="0 0 32 32" aria-hidden="true">
+          <use [attr.href]="technology.icon" [attr.xlink:href]="technology.icon"></use>
+        </svg>
+        <span>{{ technology.label }}</span>
+      </span>
       }
     </div>
   </div>

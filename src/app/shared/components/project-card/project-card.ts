@@ -15,5 +15,7 @@ export class ProjectCard {
   title = input.required<string>();
   description = input.required<string>();
   technologies = input.required<string[]>();
+  image = input.required<string>();
+  imageAlt = input.required<string>();
   projectUrl = input<string>('#');
 }

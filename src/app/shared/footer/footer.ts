@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Github, Linkedin, Mail, Instagram, LucideAngularModule } from 'lucide-angular';
+import { Github, Linkedin, Instagram, LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-footer',
@@ -11,7 +11,6 @@ import { Github, Linkedin, Mail, Instagram, LucideAngularModule } from 'lucide-a
 export class Footer {
   readonly Github = Github;
   readonly Linkedin = Linkedin;
-  readonly Mail = Mail;
   readonly Instagram = Instagram;
 
   currentYear = new Date().getFullYear();
@@ -31,11 +30,6 @@ export class Footer {
       label: 'Instagram',
       url: 'https://www.instagram.com/dev0ex',
       icon: Instagram,
-    },
-    {
-      label: 'Email',
-      url: 'mailto:ahmedidlbi@hotmail.com',
-      icon: Mail,
     },
   ];
 }

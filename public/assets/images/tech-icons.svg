@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <symbol id="angular" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="#DD0031"/>
+    <path d="M16 6L6.5 9.5L8.2 22.5L16 26L23.8 22.5L25.5 9.5L16 6Z" fill="#fff"/>
+    <path d="M16 9.1L11 20.9H13.1L14.1 18.4H17.9L18.9 20.9H21L16 9.1ZM16 12.9L17.2 16.1H14.8L16 12.9Z" fill="#DD0031"/>
+  </symbol>
+
+  <symbol id="typescript" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="#3178C6"/>
+    <text x="16" y="20.6" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800" fill="#fff">TS</text>
+  </symbol>
+
+  <symbol id="scss" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="#CF649A"/>
+    <text x="16" y="20.6" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800" fill="#fff">SC</text>
+  </symbol>
+
+  <symbol id="flutter" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="#02569B"/>
+    <path d="M8 16.2L16.2 8H21.7L13.4 16.2L21.7 24.5H16.2L8 16.2Z" fill="#fff"/>
+    <path d="M13.4 16.2L16.6 13H21.7L16.6 18.1L13.4 16.2Z" fill="#55CDFC"/>
+  </symbol>
+
+  <symbol id="dart" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="#0175C2"/>
+    <text x="16" y="20.6" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800" fill="#fff">D</text>
+  </symbol>
+
+  <symbol id="aspnet-core" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="#512BD4"/>
+    <text x="16" y="18.8" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="8.5" font-weight="800" fill="#fff">.NET</text>
+    <text x="16" y="24.7" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="6.2" font-weight="700" fill="#EDE9FE">Core</text>
+  </symbol>
+
+  <symbol id="csharp" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="#6B7280"/>
+    <text x="16" y="20.6" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800" fill="#fff">C#</text>
+  </symbol>
+
+  <symbol id="ef-core" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="#0F766E"/>
+    <text x="16" y="20.6" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10.2" font-weight="800" fill="#fff">EF</text>
+  </symbol>
+
+  <symbol id="sql-server" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="#CC2927"/>
+    <text x="16" y="20.6" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="800" fill="#fff">SQL</text>
+  </symbol>
+
+  <symbol id="rest-api" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="#334155"/>
+    <text x="16" y="20.6" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9.6" font-weight="800" fill="#fff">API</text>
+  </symbol>
+
+  <symbol id="jwt" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="#F59E0B"/>
+    <text x="16" y="20.6" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10.2" font-weight="800" fill="#111827">JWT</text>
+  </symbol>
+
+  <symbol id="firebase" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="#FFCA28"/>
+    <path d="M11.5 22.8L16 8.5L18.8 15.1L11.5 22.8Z" fill="#FFA000"/>
+    <path d="M11.5 22.8L22 22.8L18.8 15.1L11.5 22.8Z" fill="#F57C00"/>
+    <path d="M13.8 10.2L11.5 22.8L16 18.7L13.8 10.2Z" fill="#FFECB3"/>
+  </symbol>
+
+  <symbol id="git" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="#F05032"/>
+    <path d="M12.3 10.2L21.8 19.7C22.4 20.3 22.4 21.2 21.8 21.8L20.3 23.3C19.7 23.9 18.8 23.9 18.2 23.3L8.7 13.8C8.1 13.2 8.1 12.3 8.7 11.7L10.2 10.2C10.8 9.6 11.7 9.6 12.3 10.2Z" fill="#fff"/>
+    <circle cx="12.1" cy="11.9" r="1.6" fill="#F05032"/>
+    <circle cx="16" cy="15.8" r="1.6" fill="#F05032"/>
+    <circle cx="19.8" cy="19.6" r="1.6" fill="#F05032"/>
+  </symbol>
+
+  <symbol id="docker" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="#2496ED"/>
+    <path d="M9.5 16.8H12.2V14.1H14.9V16.8H17.6V14.1H20.3V16.8H23C22.8 20.2 20.4 23.3 16 23.3C12 23.3 9.4 20.4 9.5 16.8Z" fill="#fff"/>
+    <rect x="11.9" y="11.5" width="2.3" height="2.3" rx="0.5" fill="#fff"/>
+    <rect x="15.2" y="11.5" width="2.3" height="2.3" rx="0.5" fill="#fff"/>
+    <rect x="18.5" y="11.5" width="2.3" height="2.3" rx="0.5" fill="#fff"/>
+  </symbol>
+
+  <symbol id="responsive-design" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="#0EA5E9"/>
+    <rect x="8.5" y="9" width="15" height="10.2" rx="1.8" fill="#fff"/>
+    <rect x="13.2" y="20.5" width="5.6" height="1.4" rx="0.7" fill="#fff"/>
+    <rect x="10.1" y="11.1" width="9.8" height="6.2" rx="1.1" fill="#0EA5E9"/>
+  </symbol>
+</svg>

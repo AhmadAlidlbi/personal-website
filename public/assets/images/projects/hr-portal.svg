@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" fill="none">
+  <rect width="960" height="600" rx="36" fill="#F8FAFC"/>
+  <rect x="54" y="54" width="852" height="492" rx="28" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="82" y="92" width="776" height="58" rx="18" fill="#0F172A"/>
+  <rect x="82" y="170" width="250" height="318" rx="24" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <rect x="356" y="170" width="502" height="88" rx="24" fill="#DBEAFE"/>
+  <rect x="356" y="274" width="236" height="214" rx="24" fill="#E2E8F0"/>
+  <rect x="622" y="274" width="236" height="214" rx="24" fill="#0F172A"/>
+  <text x="118" y="128" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">HR Portal</text>
+  <text x="392" y="222" fill="#1D4ED8" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Internal Services</text>
+</svg>
