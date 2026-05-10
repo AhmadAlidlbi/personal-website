@@ -33,7 +33,7 @@ export class Projects {
     },
     {
       eyebrow: 'Angular Enterprise System',
-      title: 'Archive System - IBRGC',
+      title: 'Archive System',
       description:
         'Bilingual archive management system with reusable dynamic components, CRUD flows, permissions, reports, and API integration.',
       technologies: [
